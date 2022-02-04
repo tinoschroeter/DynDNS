@@ -23,10 +23,10 @@ const setIP = (collection) => {
                 `Deine neue IP ist: ${ip}`,
                 channelName
               );
-              console.log("update ip...");
-              res.status(201).json({ message: `${ip} added to database` });
-
               updateDNS(ip).catch((err) => console.error(err));
+              console.log("update ip...");
+
+              res.status(201).json({ message: `${ip} added to database` });
             });
         } else {
           res.status(200).json({ message: `${result.ip} no ip change` });
