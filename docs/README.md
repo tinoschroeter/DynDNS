@@ -1,6 +1,6 @@
 # DynDNS Setup
 
-> First approch to update (Route53) DNS with my ISP dynamic IP address.
+> First approach to update (Route53) DNS with my ISP dynamic IP address.
 
 ...update apex programmatically all other records are CNAMEs
 
