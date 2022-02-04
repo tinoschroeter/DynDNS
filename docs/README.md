@@ -9,7 +9,7 @@
 ...update apex programmatically all other records are CNAMEs
 
 
-```
+```js
 [workflow]
 
  +--------------------+
@@ -32,7 +32,7 @@
 
 ```
 
-### notes
+## notes
 
 kubectl create secret generic dnsupdater --from-literal='API_KEY=abcdefg'
 
