@@ -1,5 +1,8 @@
 # DynDNS Setup
 
+![last-commit](https://img.shields.io/github/last-commit/tinoschroeter/DynDNS.svg?style=flat)
+[![GitHub Super-Linter](https://github.com/tinoschroeter/DynDNS/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/tinoschroeter/DynDNS/actions/workflows/linter.yml)
+
 > First approach to update (Route53) DNS with my ISP dynamic IP address.
 
 ...update apex programmatically all other records are CNAMEs
