@@ -1,11 +1,11 @@
 # DynDNS Setup
 
-> First approche to update my (Route53) DNS with my ISP dynamic IP address.
+> First approche to update (Route53) DNS with my ISP dynamic IP address.
 
 update apex programmatically all other records are CNAMEs
 
 
-```shell
+```
 [workflow]
 
  +--------------------+
@@ -28,6 +28,7 @@ update apex programmatically all other records are CNAMEs
 
 ```
 
-## notes
+### notes
 
 kubectl create secret generic dnsupdater --from-literal='API_KEY=abcdefg'
+
