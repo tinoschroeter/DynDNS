@@ -12,7 +12,7 @@ const updateDNS = async (ip) => {
   });
 
   const route53 = new AWS.Route53();
-  const res = await route53
+  const tino = await route53
     .changeResourceRecordSets({
       HostedZoneId: `/hostedzone/${hostedzoneId}`,
       ChangeBatch: {
@@ -31,7 +31,7 @@ const updateDNS = async (ip) => {
     })
     .promise();
 
-  console.log(res);
+  console.log(tino);
 };
 
 module.exports = updateDNS;
