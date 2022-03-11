@@ -32,7 +32,7 @@
 
 ```
 
-## notes
+## Notes
 
 kubectl create secret generic dnsupdater --from-literal='API_KEY=abcdefg'
 
