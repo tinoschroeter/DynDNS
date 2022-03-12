@@ -6,3 +6,5 @@ resource "aws_route53_record" "argo" {
   records = ["tino.sh."]
 }
 
+
+
