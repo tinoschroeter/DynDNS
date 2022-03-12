@@ -10,7 +10,7 @@ data "aws_route53_zone" "tino" {
 
 variable "ttl" {
   description = "TTL record"
-  default = 600
+  default = 86400
 }
 
 # https://medium.com/@matzhouse/dynamic-dns-with-terraform-and-route53-3fafe7c68970
