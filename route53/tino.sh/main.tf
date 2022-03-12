@@ -3,9 +3,6 @@ provider "aws" {
  region  = "eu-central-1"
 }
 
-
-
-
 data "aws_route53_zone" "tino" {
   name         = "tino.sh."
   private_zone = false
