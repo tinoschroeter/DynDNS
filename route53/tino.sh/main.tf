@@ -8,14 +8,6 @@ data "aws_route53_zone" "tino" {
   private_zone = false
 }
 
-terraform {
-  backend "s3" {
-    bucket = "terraform-dns-tino-sh"
-    key    = "state"
-    region = "eu-central-1"
-  }
-}
-
 variable "ttl" {
   description = "TTL record"
   default = 600
