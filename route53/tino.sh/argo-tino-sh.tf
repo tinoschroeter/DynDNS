@@ -5,6 +5,3 @@ resource "aws_route53_record" "argo" {
   ttl     = "${var.ttl}"
   records = ["tino.sh."]
 }
-
-
-
