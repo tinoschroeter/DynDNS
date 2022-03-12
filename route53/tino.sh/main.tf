@@ -17,16 +17,16 @@ variable "ttl" {
 # ["${chomp(data.http.ispip.body)}"]
 # https://ipservice-6cr7xv5ksq-lm.a.run.app|jq .addr.ip
 
-data "http" "ispip" {
-  url = "https://ispip.tino.sh"
-  #url = "https://ipservice-6cr7xv5ksq-ew.a.run.app"
-
-  request_headers = {
-    "Accept" = "application/json"
-  }
-}
-
-output "DSL-Router-IP" {
-    #value = data.http.ispip.body
-    value = jsondecode(data.http.ispip.body).addr.ip
-}
+#data "http" "ispip" {
+#  url = "https://ispip.tino.sh"
+#  #url = "https://ipservice-6cr7xv5ksq-ew.a.run.app"
+#
+#  request_headers = {
+#    "Accept" = "application/json"
+#  }
+#}
+#
+#output "DSL-Router-IP" {
+#    #value = data.http.ispip.body
+#    value = jsondecode(data.http.ispip.body).addr.ip
+#}
