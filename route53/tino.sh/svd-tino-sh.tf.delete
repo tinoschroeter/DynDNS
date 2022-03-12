@@ -1,0 +1,7 @@
+resource "aws_route53_record" "svd" {
+  zone_id = data.aws_route53_zone.tino.zone_id
+  name    = "svd.${data.aws_route53_zone.tino.name}"
+  type    = "A" 
+  ttl     = "${var.ttl}"
+  records = ["${jsondecode(data.http.ispip.body).addr.ip}"]
+}
