@@ -5,3 +5,6 @@ resource "aws_route53_record" "alertmanager2" {
   ttl     = "${var.ttl}"
   records = ["tino.sh."]
 }
+
+
+
