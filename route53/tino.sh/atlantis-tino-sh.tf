@@ -5,3 +5,6 @@ resource "aws_route53_record" "atlantis" {
   ttl     = "${var.ttl}"
   records = ["tino.sh."]
 }
+
+
+
