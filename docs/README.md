@@ -7,7 +7,7 @@
 
 > First approach to update (Route53) DNS with my ISP dynamic IP address.
 
-...update apex programmatically all other records are CNAMEs
+...update apex programmatically all other records are CNAMEs managed by terraform.
 
 
 ```js
