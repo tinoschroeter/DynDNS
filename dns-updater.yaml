@@ -4,7 +4,7 @@ metadata:
   name: dns-updater
   namespace: cron
 spec:
-  schedule: "*/4 * * * *"
+  schedule: "*/2 * * * *"
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
   jobTemplate:
