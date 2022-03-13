@@ -1,5 +1,6 @@
 # DynDNS Setup
 
+[![Build Status](https://jenkins.tino.sh/buildStatus/icon?job=DynDNS%2Fmaster)](https://jenkins.tino.sh/job/DynDNS/job/master/)
 ![last-commit](https://img.shields.io/github/last-commit/tinoschroeter/DynDNS.svg?style=flat)
 [![GitHub Super-Linter](https://github.com/tinoschroeter/DynDNS/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/tinoschroeter/DynDNS/actions/workflows/linter.yml)
 [![k3s](https://img.shields.io/badge/run%20on%20-Raspberry%20Pi-red)](https://github.com/tinoschroeter/k8s.homelab)
