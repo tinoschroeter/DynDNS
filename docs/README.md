@@ -31,6 +31,18 @@
       +--------+--------+     +--------+-------+     +----------+---------+
 
 ```
+## Route 53 
+
+Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service. 
+It is designed to give developers and businesses an extremely reliable and cost effective way to route end users to Internet applications 
+by translating names like www.example.com into the numeric IP addresses like 192.0.2.1 that computers use to connect to each other. 
+Amazon Route 53 is fully compliant with IPv6 as well.
+
+## Terraform + Atlantis
+
+My domains are managed by [terraform](https://www.terraform.io/) and are applied centrally via [Atlantis](https://www.runatlantis.io/).
+
+![Pull request](https://raw.githubusercontent.com/tinoschroeter/DynDNS/master/docs/atlantis.png)
 
 ## Notes
 
