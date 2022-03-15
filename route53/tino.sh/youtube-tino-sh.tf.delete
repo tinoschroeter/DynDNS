@@ -1,7 +1,0 @@
-resource "aws_route53_record" "youtube" {
-  zone_id = data.aws_route53_zone.tino.zone_id
-  name    = "youtube.${data.aws_route53_zone.tino.name}"
-  type    = "A" 
-  ttl     = "${var.ttl}"
-  records = ["${jsondecode(data.http.ispip.body).addr.ip}"]
-}

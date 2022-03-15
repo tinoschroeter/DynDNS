@@ -1,7 +1,0 @@
-resource "aws_route53_record" "plex-server" {
-  zone_id = data.aws_route53_zone.tino.zone_id
-  name    = "plex-server.${data.aws_route53_zone.tino.name}"
-  type    = "A"
-  ttl     = "30"
-  records = ["${jsondecode(data.http.ispip.body).addr.ip}"]
-}
