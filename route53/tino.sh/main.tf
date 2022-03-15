@@ -18,7 +18,7 @@ terraform {
 
 variable "ttl" {
   description = "TTL record"
-  default = 600
+  default = 3600
 }
 
 # https://medium.com/@matzhouse/dynamic-dns-with-terraform-and-route53-3fafe7c68970
