@@ -7,7 +7,7 @@ pipeline {
           }
       }
       stage('Build') {
-        when { 
+        when {
           branch 'master'
           anyOf {
             changeset "dns-updater.yaml"
@@ -16,13 +16,13 @@ pipeline {
         steps {
             echo 'Update dns-updater....'
             sh("kubectl apply -f dns-updater.yaml")
-          }  
+          }
         }
       stage('Build Docs') {
         when { changeset "docs/**" }
         steps {
             echo 'Build Docs...'
-          }  
+          }
         }
       }
       post {
