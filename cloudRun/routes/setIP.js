@@ -1,6 +1,7 @@
 "use strict";
 const sendMessageToSlackChannel = require("../utils/sendMessageToSlackChannel");
 const updateDNS = require("../utils/updateDNS");
+const net = require('net');
 
 const { format } = require("date-fns");
 
@@ -14,7 +15,7 @@ const setIP = (collection) => {
     collection
       .findOne({}, { sort: { $natural: -1 } })
       .then((result) => {
-        if (result.ip !== ip) {
+        if (net.isIPv4(ip) && result.ip !== ip) {
           collection
             .insertOne({ ip: ip, date: format(new Date(), "dd/MM/yyyy-HH:mm") })
             .then(() => {
