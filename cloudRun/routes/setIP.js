@@ -1,7 +1,7 @@
 "use strict";
 const sendMessageToSlackChannel = require("../utils/sendMessageToSlackChannel");
 const updateDNS = require("../utils/updateDNS");
-const net = require('net');
+const net = require("net");
 
 const { format } = require("date-fns");
 
