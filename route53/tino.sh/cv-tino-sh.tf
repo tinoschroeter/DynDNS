@@ -5,3 +5,4 @@ resource "aws_route53_record" "cv" {
   ttl     = var.ttl
   records = ["tino.sh."]
 }
+
