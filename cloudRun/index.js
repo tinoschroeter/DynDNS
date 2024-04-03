@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("combined"));
 
-app.post("/" + API_KEY, setIP(collection));
+app.post("/" + API_KEY, setIP());
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
