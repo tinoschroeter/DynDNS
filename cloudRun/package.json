@@ -1,6 +1,6 @@
 {
-  "name": "ipUpdate",
-  "version": "1.0.2",
+  "name": "ip_update",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
