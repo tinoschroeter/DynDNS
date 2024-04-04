@@ -2,7 +2,8 @@
 const morgan = require("morgan");
 const setIP = require("./routes/setIP");
 
-const API_KEY_PATH = process.env.API_KEY_PATH.toString();
+const API_KEY_PATH = process.env.API_KEY_PATH.toString().trim();
+console.log(API_KEY_PATH);
 
 const express = require("express");
 const app = express();
