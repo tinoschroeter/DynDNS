@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: fritzbox-ip-updater-backend
+  name: fritzbox-ip-updater-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fritzbox-ip-updater-backend
+  template:
+    metadata:
+      labels:
+        app: fritzbox-ip-updater-backend
+    spec:
+      containers:
+        - name: fritzbox-ip-updater-backend
+          image: registry.tino.sh/fritzbox-ip-updater
+          envFrom:
+            - secretRef:
+                name: fritzbox-ip-updater
+
+          resources:
+            requests:
+              memory: "50Mi"
+              cpu: "100m"
+            limits:
+              memory: "64Mi"
+              cpu: "300m"
+
+      nodeSelector:
+        hostname: main
+      tolerations:
+        - key: "kubernetes"
+          effect: "NoSchedule"

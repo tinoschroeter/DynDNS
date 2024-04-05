@@ -1,0 +1,5 @@
+namespace: fritzbox-ip-updater
+resources:
+  - service.yml
+  - app.yaml
+
