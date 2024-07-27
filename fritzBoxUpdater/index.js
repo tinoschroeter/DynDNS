@@ -1,5 +1,6 @@
 const xml2js = require("xml2js");
 const updateDNS = require("./updateDNS");
+let logState = 0;
 
 const fritzBox = process.env.FRITZ_BOX || "10.0.1.1";
 let oldIp = "127.0.1.1";
@@ -43,8 +44,10 @@ const getExternalIPAddress = async () => {
         updateDNS(ipAdress).then((ip) => {
           oldIp = ip;
         });
+        logState = 0;
         console.log(`${now}: Update to IP: ${ipAdress}`);
-      } else {
+      } else if (logState === 0) {
+        logState = 1;
         console.log(`${now}: No updates are available for IP: ${ipAdress}`);
       }
     });
