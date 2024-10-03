@@ -56,4 +56,5 @@ const getExternalIPAddress = async () => {
   }
 };
 
+getExternalIPAddress();
 setInterval(getExternalIPAddress, 10_000);
