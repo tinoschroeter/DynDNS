@@ -5,6 +5,26 @@ let logState = 0;
 const fritzBox = process.env.FRITZ_BOX || "10.0.1.1";
 let oldIp = "127.0.1.1";
 
+const getExternalIPAddressAPI = async () => {
+  fetch("https://api.ipify.org?format=json")
+    .then((result) => result.json())
+    .then((data) => {
+      const ipAdress = data.ip;
+
+      const now = new Date();
+      if (oldIp !== ipAdress) {
+        updateDNS(ipAdress).then((ip) => {
+          oldIp = ip;
+        });
+        logState = 0;
+        console.log(`${now}: Update to IP: ${ipAdress}`);
+      } else if (logState === 0) {
+        logState = 1;
+        console.log(`${now}: No updates are available for IP: ${ipAdress}`);
+      }
+    });
+};
+
 const getExternalIPAddress = async () => {
   const soapData = `<?xml version="1.0" encoding="utf-8"?>
   <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
@@ -56,5 +76,8 @@ const getExternalIPAddress = async () => {
   }
 };
 
-getExternalIPAddress();
-setInterval(getExternalIPAddress, 10_000);
+//getExternalIPAddress();
+//setInterval(getExternalIPAddress, 10_000);
+
+getExternalIPAddressAPI();
+setInterval(getExternalIPAddressAPI, 10_000);
