@@ -22,6 +22,12 @@ const getExternalIPAddressAPI = async () => {
         logState = 1;
         console.log(`${now}: No updates are available for IP: ${ipAdress}`);
       }
+    })
+    .catch((error) => {
+      console.error(
+        `${new Date()}: Failed to fetch IP from ipify API:`,
+        error.message,
+      );
     });
 };
 
