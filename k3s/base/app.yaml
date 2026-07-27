@@ -29,8 +29,6 @@ spec:
               memory: "64Mi"
               cpu: "300m"
 
-      nodeSelector:
-        hostname: main
       tolerations:
         - key: "kubernetes"
           effect: "NoSchedule"

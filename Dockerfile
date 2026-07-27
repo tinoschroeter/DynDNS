@@ -1,4 +1,4 @@
-FROM node:22 AS app
+FROM node:24 AS app
 
 WORKDIR /app
 COPY fritzBoxUpdater .
